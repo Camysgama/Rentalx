@@ -9,8 +9,9 @@ const categoriesRepository = new CategoriesRepository();
 categoriesRoutes.post("/", (request, response) => {
     const { name, description } = request.body;
 
-    // eslint-disable-next-line prettier/prettier
-    const createCategoryService = new CreateCategoryService(categoriesRepository);
+    const createCategoryService = new CreateCategoryService(
+        categoriesRepository,
+    );
 
     createCategoryService.execute({ name, description });
 
