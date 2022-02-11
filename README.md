@@ -1,1 +1,1 @@
-# Rentalx
+# Rentx
